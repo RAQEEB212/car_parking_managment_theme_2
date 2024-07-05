@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parking Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Parking System</a>
+</nav>
+
+<div class="container mt-5">
+  <h2>Register Vehicle</h2>
+  <form id="parking-form">
+    <div class="form-group">
+      <label for="name">Owner's Name:</label>
+      <input type="text" id="name" class="form-control">
+      <div id="nameErrors"></div>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" class="form-control">
+      <div id="phoneErrors"></div>
+    </div>
+    <div class="form-group">
+      <label for="plate">License Plate:</label>
+      <input type="text" id="plate" class="form-control">
+      <div id="plateErrors"></div>
+    </div>
+    <div class="form-group">
+      <label for="model">Car Model:</label>
+      <input type="text" id="model" class="form-control">
+      <div id="modelErrors"></div>
+    </div>
+    <button type="button" id="btn1" class="btn btn-primary">Register</button>
+  </form>
+
+  <h2 class="mt-5">Parked Cars</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Plate</th>
+      <th>Model</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody id="parkedCars"></tbody>
+  </table>
+
+  <h2 class="mt-5">Receipts</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Plate</th>
+      <th>Model</th>
+      <th>Amount Due</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody id="receipts"></tbody>
+  </table>
+</div>
+
+<!-- Modal for Viewing Details -->
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Car Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Details here -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Download Receipt</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // JavaScript code goes here
+</script>
+</body>
+</html>
